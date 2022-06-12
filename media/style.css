@@ -41,6 +41,7 @@ li {
 @media only screen and (max-width: 600px) {
     .credits {
         overflow: scroll;
+        left: 300px;
     }
   }
 
