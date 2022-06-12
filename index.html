@@ -1,0 +1,91 @@
+!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>The Unheard Fall Song</title>
+        <link rel="stylesheet" href="media/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+
+    <body onLoad="scrollDiv_init()">
+    <div class="tv"></div>
+    <div class="credits" id="data" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()">
+        <p>Credits  
+            <ul>
+<li>Bamett, B. (n.d.). Emotional Awareness: Using Reality Television as a Tool for Popular Education [Review of Emotional Awareness: Using Reality Television as a Tool for Popular Education].</li>
+<li>Bonner, Frances. 2003. Ordinary Television : Analyzing Popular TV. London: Sage.</li>
+<li>Fiacco, A., Scaglioni, M. 2013. “Writing Games.” Hidden Professions of Television 2 (4): 112. https://doi.org/10.18146/2213-0969.2013.jethc049.</li>
+<li>Fiske, John., Jenkins, H., Becker, R., et al. 2011. Television Culture. London; New York: Routledge.</li>
+<li>Foucault, M. 1980. Two Lectures. In Power/Knowledge: Selected Interviews and Other Writings, 1972-1977, edited by C Gordon, 78–108. London: Vintage.</li>
+<li>-    What Is Critique. In The Politics of Truth, edited by S Lotringer and L Hochroth. Los Angeles, CA: Semiotext(e).</li>
+<li>Franzen, A., Pointner, S. 2011. “Calling Social Capital: An Analysis of the Determinants of Success on the TV Quiz Show ‘Who Wants to Be a Millionaire?’” Social Networks 33 (1): 79–87. https://doi.org/10.1016/j.socnet.2010.11.001.</li>
+<li>Hermes, J. and Hill, A. 2020. “Television’s Undoing of Social Distancing.” European Journal of Cultural Studies, May, 136754942092772. https://doi.org/10.1177/1367549420927724.</li>
+<li>Hetsroni, Amir. 2005. “Rule Britannia! Britannia Rules the Waves: A Cross-Cultural Study of Five English-Speaking Versions of a British Quiz Show Format.” Communications 30 (2). https://doi.org/10.1515/comm.2005.30.2.129.</li>
+<li>Hills, M. 2005. Who Wants to Be a Fan of Who Wants to Be a Millionaire? : Scholarly Television Criticism, “Popular Aesthetics” and Academic Tastes. In ITV Cultures: Independent Television over Fifty Years, edited by C Johnson and R Turnock, 177–95. Berkshire: Open University Press.</li>
+<li>Hoerschelmann, O. 2006. Rules of the Game : Quiz Shows and American Culture. Albany: State University Of New York Press.</li>
+<li>Holmes, Su. 2005. "Not The Final Answer". European Journal of Cultural Studies 8 (4): 483-503. doi:10.1177/1367549405057828.</li>
+<li>-	2006. “‘The “Give-Away” Shows – Who Is Really Paying?’: ‘Ordinary’ People and the Development of the British Quiz Show.” Journal of British Cinema and Television 3 (2): 284–303. https://doi.org/10.3366/jbctv.2006.3.2.284.</li>
+<li>-	2007. “‘The Question Is – Is It All Worth Knowing?’ the Cultural Circulation of the Early British Quiz Show.” Media, Culture & Society 29 (1): 53–74. https://doi.org/10.1177/0163443706071999.</li>
+<li>-	2009. The Quiz Show. Edinburgh: Edinburgh University Press.</li>
+<li>Khazanov, P. 2020. “‘What Is Our Life? A Game!’: What? Where? When? And the Capitalist Gamble of the Soviet Intelligentsia.” The Russian Review 79 (2): 269–92. https://doi.org/10.1111/russ.12266.</li>
+<li>Kuehn, Lowell L. 1976. “The Only Game in Town: Subcultural Development among Quiz Show Contestants.” The Pacific Sociological Review 19 (3): 385–400. https://doi.org/10.2307/1388755.</li>
+<li>Lewis, B. 1984. TV Games: People as Performers. In Television Mythologies, edited by L Masterman, 42–46. Comedia: London.</li>
+<li>Mast, Jelle. 2016. “Negotiating the ‘Real’ in ‘Reality Shows’: Production Side Discourses between Deconstruction and Reconstruction.” Media, Culture & Society 38 (6): 901–17. https://doi.org/10.1177/0163443716635860.</li>
+<li>Mills, A. and Rice, P. 1981/82. “Quizzing the Popular.” Screen Education 41: 15-25.</li>
+<li>Mills, Brett. 2010. “‘The Guardians of the General Interest’: Discourses of Knowledge in QI.” Television & New Media 12 (2): 136–53. https://doi.org/10.1177/1527476410365705.</li>
+<li>Missen, J. 2001. Who Wants Us to Be Millionaires? The Culture of Trivial Intellect in Contemporary Game Shows. In Closely Watched Brains, edited by M Pomerance and J Sakeris. Boston: Pearson Education.</li>
+<li>Maylor, Elizabeth A. 1994. “Ageing and the Retrieval of Specialized and General Knowledge: Performance of Masterminds.” British Journal of Psychology 85 (1): 105–14. https://doi.org/10.1111/j.2044-8295.1994.tb02511.x.</li>
+<li>Root, J. 1986. Open the Box : [about Television]. London: Comedia Pub. Group.</li>
+<li>Skovmand, M. 2000. Barbarous TV: Syndicated Wheels of Fortune. In Television: The Critical View, edited by H Newcomb, 367–82. Oxford: Oxford University Press.</li>
+<li>Teurlings, Jan. 2001. “Producing the Ordinary: Institutions, Discourses and Practices in Love Game Shows.” Continuum 15 (2): 249–63. https://doi.org/10.1080/713657803.</li>
+<li>Wayne, M. 2000. Who Wants to Be a Millionaire? Contextual Analysis and the Endgame of Public Service Television. In Formations: A 21st Century Media Studies Textbook, edited by D Fleming. Manchester: Manchester University Press.</li>
+<li>Whannel, G. 1992. Review of The Price Is Right but the Moments Are Sticky: Television, Quiz and Games Shows and Popular Culture. In Come on Down: Popular Culture in Post-War Britain, edited by D Strinati and S Wagg, 179–201. London: Routledge.</li>
+            </ul>
+        </p>
+    </div>
+    <script>
+    ScrollRate = 50;
+
+function scrollDiv_init() {
+	DivElmnt = document.getElementById('data');
+	ReachedMaxScroll = false;
+	
+	DivElmnt.scrollTop = 0;
+	PreviousScrollTop  = 0;
+	
+	ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+}
+
+function scrollDiv() {
+	
+	if (!ReachedMaxScroll) {
+		DivElmnt.scrollTop = PreviousScrollTop;
+		PreviousScrollTop++;
+		
+		ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+	}
+	else {
+		ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+		
+		DivElmnt.scrollTop = PreviousScrollTop;
+		PreviousScrollTop--;
+	}
+}
+
+function pauseDiv() {
+	clearInterval(ScrollInterval);
+}
+
+function resumeDiv() {
+	PreviousScrollTop = DivElmnt.scrollTop;
+	ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+}
+    </script>
+       
+    </body>
+
+</html>
